@@ -41,7 +41,33 @@ public class MoviePrefHTML extends HTML {
         // Title
 
         // Review Data
+        bufferedWriter.write("<h1>Review</h1>");
+        bufferedWriter.write("<table border=\"1\">");
+        bufferedWriter.write("<tr>");
+        bufferedWriter.write("<th>Name</th>");
+        for (int i=0; i < movies.length; i++) {
+            bufferedWriter.write("<th>");
+            bufferedWriter.write(movies[i]);
+            bufferedWriter.write("</th>");
+        }
 
+        for (int i=0; i < names.length; i++) {
+            bufferedWriter.write("<tr>");
+            bufferedWriter.write("<td>" + names[i] + "</td>");
+
+            for (int j=0; j < movies.length; j++) {
+                bufferedWriter.write("<td>" + reviews[i][j] + "</td>");
+            }
+            bufferedWriter.write("</tr>");
+        }
+
+        // Close
+        bufferedWriter.write("</table>");
+        bufferedWriter.write("<br>");
+        bufferedWriter.write("<br>");
+
+
+        // Recommendation Data
         bufferedWriter.write("<h1>Recommendation</h1>");
         bufferedWriter.write("<table border=\"1\">");
 

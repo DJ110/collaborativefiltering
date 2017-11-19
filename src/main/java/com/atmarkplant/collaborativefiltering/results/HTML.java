@@ -24,7 +24,6 @@ abstract public class HTML {
         try {
             fout = new FileOutputStream(filename);
             writer = new BufferedWriter(new OutputStreamWriter(fout));
-            String line = "";
 
             createHeader(writer, title);
             createBodyStart(writer, title);
